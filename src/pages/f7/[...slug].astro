@@ -1,0 +1,20 @@
+---
+import Layout from "@layouts/F7.astro";
+import { getEntryBySlug } from "astro:content";
+
+const { slug } = Astro.params;
+let isSpa = false;
+
+let entry = await getEntryBySlug("f7", slug);
+if (entry === undefined) {
+  entry = await getEntryBySlug("f7", "spa");
+  isSpa = true;
+}
+
+// const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+{isSpa ? <Layout title="hello" /> : <Content />}
+
+

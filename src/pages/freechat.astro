@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Free Chat">
+  <h1>Chat</h1>
+  <div class="chat">
+    <div class="chat-container">
+      <div class="chat-message-container">
+        <div class="chat-message">
+          <div class="chat-message-author">
+            <img src="https://codegeex.cn" alt="" />
+          </div>
+          <div class="chat-message-text">
+            <p>Hi there!</p>
+          </div>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-author">
+            <img src="https://codegeex.cn" alt="" />
+          </div>
+          <div class="chat-message-text">
+            <p>How are you today?</p>
+          </div>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-author">
+            <img src="https://codegeex.cn" alt="" />
+          </div>
+          <div class="chat-message-text">
+            <p>I'm fine! How are you today?</p>
+          </div>
+        </div>
+        <div class="chat-message">
+          <div class="chat-message-author">
+            <img src="https://codegeex.cn" alt="" />
+          </div>
+          <div class="chat-message-text">
+            <p>What's up doc?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .chat {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+  }
+  .chat-container {
+    width: 100%;
+    height: calc(100% - 120px);
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+  .chat-message-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    display: table;
+  }
+</style>
